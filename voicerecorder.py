@@ -4,8 +4,8 @@ from scipy.io.wavfile import write
 fs=44100
 #Ask to enter the recording time
 second=int(input("Enter the Recording Time in second: "))
-print("Recording....\n")
+print("")
 record_voice=sounddevice.rec(int(second * fs),samplerate=fs,channels=2)
 sounddevice.wait()
 write("MyRecording.wav",fs,record_voice)
-print("Recording is done Please check you folder to listen recording")
+print("")
